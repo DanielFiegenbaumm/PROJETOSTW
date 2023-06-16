@@ -1,0 +1,70 @@
+    /*CSS*/
+
+    @import url("https://fonts.googleapis.com/css?family=Lato");
+
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .container{
+        width: 100w;
+        height: 100vh;
+        background: #8a8889;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-box{
+        padding: 40px 35px 50px 40px;
+        border-radius: 15px;
+        box-shadow: 10px 10px 15px rgba(150, 150, 150, 0.1);
+        background: #fff;
+        font-size: 25px;
+        text-align: center;
+    }
+    .form-box header {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+
+    .form-box .form-input{
+        border: none;
+        background: #eee;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: large;
+        margin-bottom: 10px;
+    }
+
+    .form-box .form-btn{
+        border: none;
+        background: #f54758;
+        width: 101%;
+        height: 50px;
+        font-size: large;
+        color: #fff;
+        margin-bottom: 10px;
+
+    }
+
+    .form-box .form-btn:hover{
+        background-color: #f54758;
+
+        Color: #fff;
+
+        width: 220px;
+
+        height: 75px;
+
+        font-size: 25px;
+
+        border-radius: 0;
+
+        transition: all 0.3s ease;
+    }
