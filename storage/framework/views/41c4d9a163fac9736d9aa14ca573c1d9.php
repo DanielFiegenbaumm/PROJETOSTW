@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('css/cadastro.css')); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -41,8 +41,8 @@
                     </thead>
                     <tbody>
                         <tr v-for="receita in listReceitas" :key="receita.id">
-                            <td class="center">@{{ receita.id }}</td>
-                            <td class="center">@{{ receita.receita }}</td>
+                            <td class="center">{{ receita.id }}</td>
+                            <td class="center">{{ receita.receita }}</td>
                             <td class="center"><a :href="'/adicionarIngredientes/' + receita.id">Adicionar Ingredientes</a></td>
                             <td class="center"><a href="#" @click="editarReceita(receita.id)"><img src="/img/editar.png" alt="Editar"></a></td>
                             <td class="center"><a href="#" @click="excluirReceita(receita.id)"><img src="/img/excluir.png" alt="Excluir"></a></td>
@@ -191,3 +191,4 @@
     });
 </script>
 </html>
+<?php /**PATH C:\Users\User\OneDrive\Área de Trabalho\ProjetoSTW\projetoSTW\resources\views/cadastroReceita.blade.php ENDPATH**/ ?>

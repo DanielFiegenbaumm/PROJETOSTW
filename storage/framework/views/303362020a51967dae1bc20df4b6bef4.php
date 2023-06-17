@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('css/cadastro.css')); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -57,10 +57,10 @@
                     </thead>
                     <tbody>
                         <tr v-for="ingrediente of listIngredientes" :key="ingrediente.id">
-                            <td class="center">@{{ ingrediente.ordem }}</td>
-                            <td class="center">@{{ ingrediente.codigo }}</td>
-                            <td class="center">@{{ ingrediente.descricao }}</td>
-                            <td class="center">@{{ ingrediente.previstoKG }}</td>
+                            <td class="center">{{ ingrediente.ordem }}</td>
+                            <td class="center">{{ ingrediente.codigo }}</td>
+                            <td class="center">{{ ingrediente.descricao }}</td>
+                            <td class="center">{{ ingrediente.previstoKG }}</td>
                             <td class="center"><a href="#" @click="editarReceita(ingrediente.id)"><img src="/img/editar.png" alt="Editar"></a></td>
                             <td class="center"><a href="#" @click="excluirIngrediente(ingrediente.id)"><img src="/img/excluir.png" alt="Excluir"></a></td>
                         </tr>
@@ -95,7 +95,7 @@
                     });
             },
             cadastrarIngrediente() {
-                const receitaId = "{{ $id }}";
+                const receitaId = "<?php echo e($id); ?>";
                 const url = '/cadastrar/ingredientes/' + receitaId;
                 
                 axios.post(url, this.cadIngrediente)
@@ -234,7 +234,7 @@
 
         },
         mounted() {
-            const receitaId = "{{ $id }}";
+            const receitaId = "<?php echo e($id); ?>";
             this.buscarNomeReceita(receitaId);
             this.listarIngredientes();
         }
@@ -245,3 +245,4 @@
     }
 </script>
 </html>
+<?php /**PATH C:\Users\User\OneDrive\Área de Trabalho\ProjetoSTW\projetoSTW\resources\views/cadastroIngrediente.blade.php ENDPATH**/ ?>
